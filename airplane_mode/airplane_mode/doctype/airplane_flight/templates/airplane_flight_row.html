@@ -1,0 +1,25 @@
+<!-- <div>
+	<h3></h3>
+
+	<br>
+	<a href="/{{ doc.route |e }}">{{ (doc.airplane) |e }}</a>
+</div>
+</div> -->
+<!-- this is a sample default list template -->
+<div>
+	<div class="card">
+		<h5 class="card-header">
+			{% set doc2 = frappe.get_doc('Airplane', doc.airplane) %}
+			{{ doc2.airline }}
+		</h5>
+
+		<div class="card-body">
+			<p class="card-text">{{doc.source_airport_code}} -> {{doc.destination_airport_code}}</p>
+			<p class="card-text">{{doc.date_of_departure}}</p>
+			<p class="card-text">{{frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }} |
+				{{(doc.time_of_departure)}} | {{(frappe.utils.format_duration(doc.duration))}} </p>
+			<a href="/{{ doc.route |e }}" class="btn btn-primary">View Flight</a>
+		</div>
+	</div>
+	<br>
+</div>

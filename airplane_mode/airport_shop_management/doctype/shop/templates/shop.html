@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h2>{{ doc.shop_name }}</h2>
+
+<li>Shop Number: {{doc.name}}</li>
+<li>Area: {{doc.area}} Sq Feet</li>
+<li>Airport: {{doc.airport}}</li>
+<li>Availablity Status: {{doc.status}}</li>
+<br>
+{% if doc.status == "Available" %}
+<a href="/shop-contract/new?shop={{doc.name}}" class="btn btn-primary">Book Shop</a>
+{% else %}
+<p style="color:red;">Shop is Occupied </p>
+{% endif %}
+
+{% endblock %}
+<!-- this is a sample default web page template -->

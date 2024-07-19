@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{airport}",
+ "creation": "2024-07-17 15:19:45.061627",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_number",
+  "shop_name",
+  "area_in_sq_feet",
+  "rent",
+  "column_break_dnwe",
+  "status",
+  "airport",
+  "tenant",
+  "section_break_yynq",
+  "is_published",
+  "column_break_coqp",
+  "route"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dnwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOccupied"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.status== \"Occupied\"",
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "mandatory_depends_on": "eval:doc.status== \"Occupied\"",
+   "options": "Tenant"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published?"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "section_break_yynq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_coqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rent",
+   "fieldtype": "Currency",
+   "label": "Rent"
+  },
+  {
+   "fieldname": "area_in_sq_feet",
+   "fieldtype": "Float",
+   "label": "Area in Sq Feet"
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2024-07-18 17:45:05.262895",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shops",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Available"
+  },
+  {
+   "color": "Red",
+   "title": "Occupied"
+  }
+ ]
+}

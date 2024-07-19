@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop}-Contract-{####}",
+ "creation": "2024-07-17 15:47:18.030828",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop",
+  "tenant",
+  "rent_amount",
+  "column_break_bbst",
+  "shop_name",
+  "contract_start_date",
+  "contract_end_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.tenant",
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.rent",
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bbst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Contract Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Contract",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "shop.shop_name",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Rent Payment",
+   "link_fieldname": "contract"
+  }
+ ],
+ "modified": "2024-07-18 16:34:29.121813",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

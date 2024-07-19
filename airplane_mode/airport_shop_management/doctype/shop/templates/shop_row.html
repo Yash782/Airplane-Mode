@@ -1,0 +1,16 @@
+<div>
+	<div class="card">
+		<h5 class="card-header">
+			
+			{{ doc.name}} : {{doc.shop_name}}
+		</h5>
+
+		<div class="card-body">
+			<p class="card-text"> Area = {{doc.area}} Sq Feet</p>
+			<p class="card-text">Status = {{doc.status}}</p>
+			<p class="card-text">Airport = {{doc.airport }}  </p>
+			<a href="/{{ doc.route |e }}" class="btn btn-primary">View Shop Details</a>
+		</div>
+	</div>
+	<br>
+</div>
