@@ -1,17 +1,9 @@
 # Copyright (c) 2024, Yash Wadgaonkar and contributors
 # For license information, please see license.txt
 
-
 from frappe.model.document import Document
 import random
 from frappe import *
-
-# def generate_seat():
-#     random_integer = random.randint(0, 99)
-#     random_letter = random.choice(['A','B','C','D', 'E'])
-#     seat = f"{random_integer}{random_letter}"
-#     return seat
-
 
 class AirplaneTicket(Document):
     def validate(self):
@@ -30,14 +22,11 @@ class AirplaneTicket(Document):
 
         self.add_ons = unique_add_ons
         self.total_amount = total + self.flight_price
-        
-    #def before_save(self):
-    #    self.seat = generate_seat()
-        
+               
     def on_submit(self):
         if self.status != "Boarded":
             frappe.msgprint(
-                msg = "Passenger not boarded",
+                msg = "Can't Submit Passenger is not boarded",
                 title = "Error",
                 raise_exception= frappe.ValidationError
             )
