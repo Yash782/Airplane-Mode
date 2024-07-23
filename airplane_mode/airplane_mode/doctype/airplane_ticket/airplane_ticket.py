@@ -3,7 +3,6 @@
 
 
 from frappe.model.document import Document
-import random
 from frappe import *
 
 # def generate_seat():
@@ -11,7 +10,6 @@ from frappe import *
 #     random_letter = random.choice(['A','B','C','D', 'E'])
 #     seat = f"{random_integer}{random_letter}"
 #     return seat
-
 
 class AirplaneTicket(Document):
     def validate(self):

@@ -15,10 +15,6 @@ frappe.ui.form.on('Airplane Ticket', {
         let total_add_ons_amount = frm.doc.add_ons.reduce((sum, add_on) => sum + add_on.amount, 0);
         frm.set_value('total_amount', frm.doc.flight_price + total_add_ons_amount);
     },
-
-    // Adding Custom Button:
-
-   
 });
 
 frappe.ui.form.on('Airplane Ticket', {
@@ -34,10 +30,11 @@ frappe.ui.form.on('Airplane Ticket', {
             ],
             function(values) {
                 frm.set_value('seat', values.seat);
-                frm.save();
             },
             'Assign Seat',
             'Assign');
         }, 'Actions'); 
+
+        console.log(frm.doc.status);
     }
 });

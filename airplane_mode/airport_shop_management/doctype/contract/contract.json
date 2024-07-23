@@ -30,8 +30,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Tenant",
-   "options": "Tenant",
-   "reqd": 1
+   "options": "Tenant"
   },
   {
    "fetch_from": "shop.rent",
@@ -83,7 +82,7 @@
    "link_fieldname": "contract"
   }
  ],
- "modified": "2024-07-18 16:34:29.121813",
+ "modified": "2024-07-23 13:06:27.889418",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract",

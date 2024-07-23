@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-07-23 11:50:56.418174",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Tenant",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>You are added as Tenant in ERP System.</p>\n",
+ "message_type": "Markdown",
+ "modified": "2024-07-23 11:52:56.365740",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "You are added as Tenant",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "email"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Shop Rent Remainder",
+ "sender_email": "wadgaonkaryash782@gmail.com",
+ "subject": "You are added as tenant."
+}
