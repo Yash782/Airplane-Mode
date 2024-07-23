@@ -48,7 +48,8 @@
    "in_list_view": 1,
    "label": "Airplane",
    "options": "Airplane",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "date_of_departure",
@@ -146,7 +147,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-17 13:18:26.406261",
+ "modified": "2024-07-21 13:58:34.992030",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
@@ -218,12 +219,12 @@
    "title": "Scheduled"
   },
   {
-   "color": "Red",
-   "title": "Cancelled"
-  },
-  {
    "color": "Green",
    "title": "Completed"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
   }
  ]
 }
