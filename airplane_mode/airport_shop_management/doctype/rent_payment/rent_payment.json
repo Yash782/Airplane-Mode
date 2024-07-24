@@ -17,6 +17,7 @@
  ],
  "fields": [
   {
+   "fetch_from": "invoice_number.contract_id",
    "fieldname": "contract",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -28,7 +29,8 @@
    "default": "Today",
    "fieldname": "payment_date",
    "fieldtype": "Date",
-   "label": "Payment Date"
+   "label": "Payment Date",
+   "options": "Today"
   },
   {
    "fieldname": "amount_paid",
@@ -56,11 +58,12 @@
    "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
   },
   {
-   "fetch_from": "contract.tenant",
+   "fetch_from": "invoice_number.tenant_name",
    "fieldname": "tenant_name",
    "fieldtype": "Link",
    "label": "Tenant Name",
-   "options": "Tenant"
+   "options": "Tenant",
+   "reqd": 1
   },
   {
    "fieldname": "invoice_number",
@@ -73,7 +76,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-23 16:48:08.153920",
+ "modified": "2024-07-24 18:08:34.953954",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Rent Payment",
