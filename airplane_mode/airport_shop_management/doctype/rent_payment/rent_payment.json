@@ -8,7 +8,7 @@
  "field_order": [
   "invoice_number",
   "contract",
-  "amount_paid",
+  "amount_to_pay",
   "rent_for_the_month",
   "column_break_xrvy",
   "tenant_name",
@@ -31,11 +31,6 @@
    "fieldtype": "Date",
    "label": "Payment Date",
    "options": "Today"
-  },
-  {
-   "fieldname": "amount_paid",
-   "fieldtype": "Currency",
-   "label": "Amount Paid"
   },
   {
    "fieldname": "amended_from",
@@ -71,12 +66,18 @@
    "label": "Invoice Number",
    "options": "Rent Invoice",
    "reqd": 1
+  },
+  {
+   "fetch_from": "invoice_number.rent_amount",
+   "fieldname": "amount_to_pay",
+   "fieldtype": "Currency",
+   "label": "Amount to Pay"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-24 18:08:34.953954",
+ "modified": "2024-07-24 18:28:00.885057",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Rent Payment",
