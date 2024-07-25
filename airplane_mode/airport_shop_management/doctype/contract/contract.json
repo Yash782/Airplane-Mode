@@ -82,7 +82,11 @@
    "link_fieldname": "contract"
   }
  ],
+<<<<<<< HEAD
  "modified": "2024-07-25 11:20:39.002157",
+=======
+ "modified": "2024-07-24 16:38:14.566820",
+>>>>>>> b6228ce96a52c7b68620a15986efcacdefc7119c
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Contract",

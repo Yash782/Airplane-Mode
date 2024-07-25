@@ -6,7 +6,8 @@ frappe.ui.form.on("Shop", {
         frm.add_custom_button(__("Make Contract"), function() {
             
             let shop_name = frm.doc.name;
-            let url = `http://yash.localhost:8000/app/contract/new-contract?shop=${shop_name}`;
+            const siteUrl = window.location.origin;
+            let url = `${siteUrl}/app/contract/new-contract?shop=${shop_name}`;
             window.open(url, '_blank');
         });
     },
@@ -18,4 +19,3 @@ frappe.ui.form.on("Shop", {
         }
     },
 });
-

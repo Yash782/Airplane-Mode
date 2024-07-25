@@ -7,9 +7,10 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "shop_details_section",
   "shop_number",
   "shop_name",
-  "area_in_sq_feet",
+  "area",
   "rent",
   "column_break_dnwe",
   "status",
@@ -26,15 +27,13 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Shop Number",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "shop_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Shop Name",
-   "reqd": 1
+   "label": "Shop Name"
   },
   {
    "fieldname": "column_break_dnwe",
@@ -85,7 +84,12 @@
    "label": "Rent"
   },
   {
-   "fieldname": "area_in_sq_feet",
+   "fieldname": "shop_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Details"
+  },
+  {
+   "fieldname": "area",
    "fieldtype": "Float",
    "label": "Area in Sq Feet"
   }
@@ -94,7 +98,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-07-18 17:45:05.262895",
+ "modified": "2024-07-24 11:45:14.907314",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop",

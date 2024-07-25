@@ -8,7 +8,7 @@
  "field_order": [
   "invoice_number",
   "contract",
-  "amount_paid",
+  "amount_to_pay",
   "rent_for_the_month",
   "column_break_xrvy",
   "tenant_name",
@@ -17,6 +17,7 @@
  ],
  "fields": [
   {
+   "fetch_from": "invoice_number.contract_id",
    "fieldname": "contract",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -28,12 +29,8 @@
    "default": "Today",
    "fieldname": "payment_date",
    "fieldtype": "Date",
-   "label": "Payment Date"
-  },
-  {
-   "fieldname": "amount_paid",
-   "fieldtype": "Currency",
-   "label": "Amount Paid"
+   "label": "Payment Date",
+   "options": "Today"
   },
   {
    "fieldname": "amended_from",
@@ -56,11 +53,12 @@
    "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
   },
   {
-   "fetch_from": "contract.tenant",
+   "fetch_from": "invoice_number.tenant_name",
    "fieldname": "tenant_name",
    "fieldtype": "Link",
    "label": "Tenant Name",
-   "options": "Tenant"
+   "options": "Tenant",
+   "reqd": 1
   },
   {
    "fieldname": "invoice_number",
@@ -68,12 +66,18 @@
    "label": "Invoice Number",
    "options": "Rent Invoice",
    "reqd": 1
+  },
+  {
+   "fetch_from": "invoice_number.rent_amount",
+   "fieldname": "amount_to_pay",
+   "fieldtype": "Currency",
+   "label": "Amount to Pay"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-23 16:48:08.153920",
+ "modified": "2024-07-24 18:28:00.885057",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Rent Payment",
