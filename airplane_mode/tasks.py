@@ -3,8 +3,7 @@ import frappe
 def send_rent_payment_reminders():
     print("Hello")
     recipients = [
-    'yash.wadgaonkar@hostingduty.com',
-    'wadgaonkaryash782@gmail.com'
+    'yash.wadgaonkar@hostingduty.com'
     ]
     
     frappe.sendmail(
