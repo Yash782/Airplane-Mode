@@ -25,7 +25,9 @@
   "column_break_mfps",
   "time_of_departure",
   "is_published",
-  "route"
+  "route",
+  "crew_section",
+  "table_gxka"
  ],
  "fields": [
   {
@@ -70,12 +72,6 @@
    "fieldtype": "Duration",
    "in_list_view": 1,
    "label": "Duration"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Scheduled\nCompleted\nCancelled"
   },
   {
    "fieldname": "source_airport",
@@ -140,6 +136,22 @@
    "fieldname": "gate_number",
    "fieldtype": "Data",
    "label": "Gate Number"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "crew_section",
+   "fieldtype": "Section Break",
+   "label": "Crew"
+  },
+  {
+   "fieldname": "table_gxka",
+   "fieldtype": "Table",
+   "options": "Flight Crew"
   }
  ],
  "has_web_view": 1,
@@ -147,7 +159,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-21 13:58:34.992030",
+ "modified": "2024-07-25 12:52:23.186501",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

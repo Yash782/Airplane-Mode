@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Contract", {
     refresh: function(frm) {
-        frm.add_custom_button(__("Make Contract"), function() {
+        frm.add_custom_button(__("Make Rent Invoice"), function() {
             
             let contractId = frm.doc.name;
             const siteUrl = window.location.origin;
