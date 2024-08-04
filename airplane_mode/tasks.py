@@ -18,3 +18,5 @@ def send_rent_payment_reminders():
     header=('Shop Rent Reminder')
     )
     
+def printHello():
+    print("Hellow from hello function")
